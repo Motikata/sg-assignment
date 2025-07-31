@@ -43,13 +43,13 @@ export class MenuOverlay extends Container {
         // Fullscreen button (top right)
         this.fullscreenBtn.visible = !(screenfull.isEnabled && screenfull.isFullscreen);
         if (this.fullscreenBtn.visible) {
-            this.fullscreenBtn.x =  20;
-            this.fullscreenBtn.y = stageHeight - this.fullscreenBtn.height -20;
+            this.fullscreenBtn.x =  stageWidth - this.fullscreenBtn.width -20;
+            this.fullscreenBtn.y = 20;
         }
 
         // Back button (top left)
         this.backBtn.x = stageWidth - this.backBtn.width - 20;
-        this.backBtn.y = stageHeight - this.backBtn.height - 20;
+        this.backBtn.y = stageHeight - this.backBtn.height - 80;
 
         // Layout and center menuView (the button group)
         this.menuView.layoutButtons(stageWidth, stageHeight);
